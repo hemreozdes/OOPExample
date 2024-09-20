@@ -20,7 +20,6 @@ class Appliance(Controllable):
         self.is_on = False
 
     def turn_on(self):
-        """Turn on to device"""
         if not self.is_on:
             self.is_on = True
             print(f"{self.name} turned on.")
@@ -35,7 +34,6 @@ class Appliance(Controllable):
             print(f"{self.name} already turn off.")
 
     def get_status(self):
-        """get the state of device"""
         return f"{self.name} {'turn on' if self.is_on else 'turn off'}"
     
 class Light(Appliance):
